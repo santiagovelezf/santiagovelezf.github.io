@@ -82,9 +82,9 @@ ul {
 
 #loading {
     position: fixed;
-    top: 47%;
-    right:75%;/* Distancia desde la izquierda */
-    width: 123px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    top: 46%;
+    right:74%;/* Distancia desde la izquierda */
+    width: 162px; /* Ancho de la imagen (ajusta según tu preferencia) */
     height: auto; /* Mantener la proporción original de la imagen */
     z-index: 9999; /* Asegura que la imagen esté en la parte superior */
 }
