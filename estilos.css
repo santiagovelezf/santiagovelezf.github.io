@@ -1,0 +1,92 @@
+/*Estilo para el encabezado*/
+header {
+    background-color: #4f6f6e;
+    color: #c7f5f5;
+    text-align: center;
+    padding: 60px;
+}
+
+
+
+/* Estilo para el texto principal */
+main {
+    font-size: 18px;
+    text-align: center;
+    margin: 0; /* Elimina los márgenes para que el main llegue a los bordes del body */
+    padding: 20px; /* Agrega un relleno uniforme alrededor del contenido del main */
+    background-color: #abcac3; /* Cambia '#ff5733' por el color de fondo que desees */
+}
+/* Establece un fondo de color uniforme para el elemento body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cambia '#f0f0f0' por el color de fondo que desees */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #4f7272;
+    color: #c7f5f5;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo para las imágenes de redes sociales */
+ul li a img {
+    width: 50px; /* Cambia este valor según el tamaño deseado */
+    height: auto; /* Mantener la proporción original */
+}
+
+/* Estilo para la lista de redes sociales */
+ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Utiliza el modelo de caja flexible (Flexbox) */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* Estilo para la imagen de Santiago en la parte superior derecha */
+#imagen-santiago {
+    position: absolute;
+    top: 1px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la izquierda */
+    width: 200px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    height: auto; /* Mantener la proporción original de la imagen */
+}
+
+#robot {
+    position: fixed;
+    top: 54%;
+    right:12%;
+    width: 270px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    transform: translate(0, -50%);
+    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
+}
+
+#AI {
+    position: fixed;
+    top: 63%;
+    right:72%;
+    width: 210px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    transform: translate(0, -50%);
+    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
+}
+
+#logo {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la izquierda */
+    width: 200px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    height: auto; /* Mantener la proporción original de la imagen */
+}
+
+#loading {
+    position: fixed;
+    top: 47%;
+    right:75%;/* Distancia desde la izquierda */
+    width: 123px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    height: auto; /* Mantener la proporción original de la imagen */
+    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
+}
+
+
