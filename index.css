@@ -3,7 +3,7 @@ header {
     background-color: #4f6f6e;
     color: #c7f5f5;
     text-align: center;
-    padding: 60px;
+    padding:50px;
 }
 
 
@@ -11,6 +11,7 @@ header {
 /* Estilo para el texto principal */
 main {
     font-size: 18px;
+    font-weight: bold;
     text-align: center;
     margin: 0; /* Elimina los márgenes para que el main llegue a los bordes del body */
     padding: 20px; /* Agrega un relleno uniforme alrededor del contenido del main */
@@ -50,43 +51,43 @@ ul {
     position: absolute;
     top: 1px; /* Distancia desde la parte superior */
     left: 10px; /* Distancia desde la izquierda */
-    width: 200px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    width: 180px; /* Ancho de la imagen (ajusta según tu preferencia) */
     height: auto; /* Mantener la proporción original de la imagen */
 }
 
 #robot {
     position: fixed;
-    top: 54%;
-    right:12%;
-    width: 270px; /* Ancho de la imagen (ajusta según tu preferencia) */
-    transform: translate(0, -50%);
-    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
-}
-
-#AI {
-    position: fixed;
-    top: 63%;
-    right:72%;
+    top: 360px;
+    right: 120px;
     width: 210px; /* Ancho de la imagen (ajusta según tu preferencia) */
     transform: translate(0, -50%);
-    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
+    z-index: 9990; /* Asegura que la imagen esté en la parte superior */
 }
+
 
 #logo {
     position: absolute;
     top: 10px; /* Distancia desde la parte superior */
     right: 10px; /* Distancia desde la izquierda */
-    width: 200px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    width: 180px; /* Ancho de la imagen (ajusta según tu preferencia) */
     height: auto; /* Mantener la proporción original de la imagen */
 }
 
 #loading {
-    position: fixed;
-    top: 46%;
-    right:74%;/* Distancia desde la izquierda */
-    width: 162px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    position:  absolute;
+    top:270px;
+    left:150px;/* Distancia desde la izquierda */
+    width: 120px; /* Ancho de la imagen (ajusta según tu preferencia) */
     height: auto; /* Mantener la proporción original de la imagen */
-    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
+    z-index: 9998; /* Asegura que la imagen esté en la parte superior */
 }
 
 
+#AI {
+    position:  absolute;
+    top: 360px;
+    left:120px;
+    width: 180px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    transform: translate(0, -50%);
+    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
+}
