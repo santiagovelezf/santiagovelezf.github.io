@@ -70,9 +70,9 @@ ul {
 
 #logo {
     position: absolute;
-    top: 10px; /* Distancia desde la parte superior */
+    top: -27px; /* Distancia desde la parte superior */
     right: 10px; /* Distancia desde la izquierda */
-    width: 180px; /* Ancho de la imagen (ajusta según tu preferencia) */
+    width: 270px; /* Ancho de la imagen (ajusta según tu preferencia) */
     height: auto; /* Mantener la proporción original de la imagen */
 }
 
