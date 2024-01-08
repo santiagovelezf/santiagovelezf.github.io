@@ -1,10 +1,15 @@
 /*Estilo para el encabezado*/
 header {
-    background-color: #4f6f6e;
-    color: #c7f5f5;
+    background-image: url('matrixblue.jpg'); 
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    color: #a6f8ff;
     text-align: center;
-    padding:50px;
+    text-shadow: 3px 3px 6px #000;
+    padding: 50px;
 }
+
 
 
 
@@ -15,7 +20,7 @@ main {
     text-align: center;
     margin: 0; /* Elimina los márgenes para que el main llegue a los bordes del body */
     padding: 20px; /* Agrega un relleno uniforme alrededor del contenido del main */
-    background-color: #abcac3; /* Cambia '#ff5733' por el color de fondo que desees */
+    background-color: #a6f8ff; /* Cambia '#ff5733' por el color de fondo que desees */
 }
 /* Establece un fondo de color uniforme para el elemento body */
 body {
@@ -26,9 +31,13 @@ body {
 
 /* Estilo para el pie de página */
 footer {
-    background-color: #4f7272;
-    color: #c7f5f5;
+    background-image: url('matrixblue.jpg'); 
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+    background-position: center; /* Para centrar la imagen */
+    color: #a6f8ff;
     text-align: center;
+    text-shadow: 3px 3px 6px #000;
     padding: 10px;
 }
 
