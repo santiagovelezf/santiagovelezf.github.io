@@ -72,13 +72,12 @@ ul {
 
 #robot {
     position: fixed;
-    top: 60%;
-    right: 2%;
-    width: 18%; /* Ancho fijo en píxeles (ajusta según tu preferencia) */
-    min-width: 18%;
-    height: auto; /* Para mantener la proporción original de la imagen */
+    bottom: 0.3%;
+    left:18%;
+    width: 12%; /* Ancho fijo en píxeles (ajusta según tu preferencia) */
+    min-width: 9%;
     transform: translate(0, -50%);
-    z-index: 9990; /* Asegura que la imagen esté en la parte superior */
+    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
 }
 
 
@@ -91,23 +90,3 @@ ul {
     height: auto; /* Mantener la proporción original de la imagen */
 }
 
-#loading {
-    position: fixed;
-    bottom: 42%;
-    left:7.2%;/* Distancia desde la izquierda */
-    width: 7%; /* Ancho fijo en píxeles (ajusta según tu preferencia) */
-    min-width: 7%;
-    height: auto; /* Mantener la proporción original de la imagen */
-    z-index: 9998; /* Asegura que la imagen esté en la parte superior */
-}
-
-
-#AI {
-    position: fixed;
-    bottom: 0.1%;
-    left:5%;
-    width: 12%; /* Ancho fijo en píxeles (ajusta según tu preferencia) */
-    min-width: 12%;
-    transform: translate(0, -50%);
-    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
-}
