@@ -45,6 +45,12 @@ footer {
 ul li a img {
     width: 50px; /* Cambia este valor según el tamaño deseado */
     height: auto; /* Mantener la proporción original */
+    transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones para suavizar el cambio */
+}
+
+/* Efecto de resplandor al pasar el cursor sobre las imágenes de redes sociales */
+ul li a img:hover {
+    transform: scale(1.5); /* Hace que el icono se agrande ligeramente al pasar el cursor */
 }
 
 /* Estilo para la lista de redes sociales */
