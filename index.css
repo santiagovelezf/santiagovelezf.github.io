@@ -1,40 +1,97 @@
-/*Estilo para el encabezado*/
+/* Estilo para el encabezado */
 header {
     background-image: url('matrixblue.jpg'); 
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #a6f8ff;
     text-align: center;
     text-shadow: 3px 3px 6px #000;
-    padding: 50px;
+    padding: 20px;
+    position: relative;
+    height: 145px; /* Ajusta este valor para cambiar la altura de la primera sección */
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinear al final */
+    height: 100%; /* Asegurar que el contenido ocupe toda la altura del header */
+}
 
+/* Ajuste de la posición de SantiagoVF.png */
+.header-img:first-child {
+    width: 180px;
+    height: auto;
+    position: relative;
+    bottom: -20px; /* Ajusta este valor para mover la imagen hacia abajo */
+}
 
+/* Ajuste de la posición del logo */
+.header-img:last-child {
+    width: 249px; /* Aumentar el tamaño del logo */
+    height: auto;
+    position: relative;
+    bottom: -63px; /* Ajusta este valor para mover la imagen hacia abajo */
+}
 
 /* Estilo para el texto principal */
 main {
+    background-color: #a6f8ff;
+    padding: 10px;
+}
+
+.main-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh; /* Reducir la altura para ver toda la página */
+}
+
+.robot {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 16.6%; /* Limitar el espacio del robot a 1/6 */
+    align-items: flex-end; /* Alinear al final */
+    position: relative;
+    bottom: -72px;
+}
+
+.robot img {
+    width: 180px; /* Ajustar el tamaño del robot */
+    height: auto;
+}
+
+/* Ajuste de la posición del texto */
+.text-content {
+    flex: 5;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    margin: 0; /* Elimina los márgenes para que el main llegue a los bordes del body */
-    padding: 20px; /* Agrega un relleno uniforme alrededor del contenido del main */
-    background-color: #a6f8ff; /* Cambia '#ff5733' por el color de fondo que desees */
+    padding-left: 10px;
+    text-align: center; /* Centrando el texto */
+    margin-left: -207px; /* Ajusta este valor para mover el texto más a la derecha */
 }
+
+.main-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold; /* Poner el texto en negrita */
+}
+
 /* Establece un fondo de color uniforme para el elemento body */
 body {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Cambia '#f0f0f0' por el color de fondo que desees */
+    background-color: #f0f0f0;
 }
 
 /* Estilo para el pie de página */
 footer {
-    background-image: url('matrixblue.jpg'); 
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
-    background-position: center; /* Para centrar la imagen */
+    background-image: url('matrixblue.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #a6f8ff;
     text-align: center;
     text-shadow: 3px 3px 6px #000;
@@ -43,50 +100,110 @@ footer {
 
 /* Estilo para las imágenes de redes sociales */
 ul li a img {
-    width: 50px; /* Cambia este valor según el tamaño deseado */
-    height: auto; /* Mantener la proporción original */
-    transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones para suavizar el cambio */
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Efecto de resplandor al pasar el cursor sobre las imágenes de redes sociales */
 ul li a img:hover {
-    transform: scale(1.5); /* Hace que el icono se agrande ligeramente al pasar el cursor */
+    transform: scale(1.5);
 }
 
 /* Estilo para la lista de redes sociales */
 ul {
-    list-style: none; /* Quita los puntos de la lista */
-    display: flex; /* Utiliza el modelo de caja flexible (Flexbox) */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 10px; /* Espacio entre elementos */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilo para la imagen de Santiago en la parte superior derecha */
-#imagen-santiago {
-    position: absolute;
-    top: 1px; /* Distancia desde la parte superior */
-    left: 10px; /* Distancia desde la izquierda */
-    width: 180px; /* Ancho de la imagen (ajusta según tu preferencia) */
-    height: auto; /* Mantener la proporción original de la imagen */
+/* Media Queries para Responsividad */
+
+/* Dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        height: auto; /* Dejar que la altura se ajuste automáticamente en móviles */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-img:first-child {
+        width: 150px;
+        position: relative;
+        bottom: 0; /* Ajustar posición para móviles */
+    }
+
+    .header-img:last-child {
+        width: 180px;
+        position: relative;
+        bottom: 0; /* Ajustar posición para móviles */
+    }
+
+    .main-top {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .text-content {
+        padding-left: 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    main {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    ul li a img {
+        width: 40px;
+    }
+
+    .robot img {
+        width: 140px;
+        position: relative;
+        bottom:72px; /* Ajustar posición para móviles */
+    }
 }
 
-#robot {
-    position: fixed;
-    bottom: 0.3%;
-    left:18%;
-    width: 12%; /* Ancho fijo en píxeles (ajusta según tu preferencia) */
-    min-width: 9%;
-    transform: translate(0, -50%);
-    z-index: 9997; /* Asegura que la imagen esté en la parte superior */
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-img:first-child {
+        width: 160px;
+        position: relative;
+        bottom: 0; /* Ajustar posición para tablets */
+    }
+
+    .header-img:last-child {
+        width: 200px;
+        position: relative;
+        bottom: 0; /* Ajustar posición para tablets */
+    }
+
+    main {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    ul li a img {
+        width: 50px;
+    }
+
+    .robot img {
+        width: 140px;
+        position: relative;
+        bottom: 0; /* Ajustar posición para tablets */
+    }
 }
-
-
-
-#logo {
-    position: absolute;
-    top: -27px; /* Distancia desde la parte superior */
-    right: 10px; /* Distancia desde la izquierda */
-    width: 270px; /* Ancho de la imagen (ajusta según tu preferencia) */
-    height: auto; /* Mantener la proporción original de la imagen */
-}
-
