@@ -17,6 +17,7 @@
     </header>
 
     <main>
+        <div id="matrix-overlay"></div>
         <div class="main-top">
             <div class="robot">
                 <img src="Robot6.gif" alt="Robot" id="robot">
@@ -82,6 +83,26 @@
         }
 
         document.addEventListener('DOMContentLoaded', type);
+    </script>
+    <script>
+        const matrixContainer = document.getElementById('matrix-overlay');
+
+        function createColumn() {
+            const column = document.createElement('div');
+            column.classList.add('matrix-column');
+            const length = Math.floor(Math.random() * 15) + 10;
+            for (let i = 0; i < length; i++) {
+                column.innerHTML += Math.round(Math.random()) + '<br>';
+            }
+            column.style.left = Math.random() * 100 + '%';
+            column.style.fontSize = Math.random() * 25 + 15 + 'px';
+            column.style.opacity = 0.3 + Math.random() * 0.3;
+            column.style.animationDuration = Math.random() * 3 + 3 + 's';
+            matrixContainer.appendChild(column);
+            column.addEventListener('animationend', () => column.remove());
+        }
+
+        setInterval(createColumn, 200);
     </script>
 </body>
 </html>
