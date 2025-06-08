@@ -22,10 +22,7 @@
                 <img src="Robot6.gif" alt="Robot" id="robot">
             </div>
             <div class="text-content">
-                <p><strong>¡Hola! Soy un desarrollador apasionado por la tecnología y la programación.</strong></p>
-                <p><strong>Electronico con experiencia en: Diseño, Control, Sistemas Embebidos e IoT.</strong></p>
-                <p><strong>Tengo un gran entusiasmo explorando el universo de la IA y la Ciencia de Datos.</strong></p>
-                <p><strong>Python es mi herramienta predilecta.</strong></p>
+                <p id="typing" class="typing"></p>
             </div>
         </div>
         <div class="main-bottom">
@@ -55,5 +52,36 @@
         <p>Contacto: sanluiscompany.py@gmail.com </p>
         <p>ai.innovator2023@gmail.com</p>
     </footer>
+    <script>
+        const lines = [
+            "¡Hola!",
+            "Soy un Desarrollador Maker Independiente, apasionado por la tecnología y la programación.",
+            "Domino Python y tengo experiencia en Diseño, Control, Sistemas Embebidos, IoT, IA y Ciencia de Datos.",
+            "Como early adopter, incorporo IA en mis flujos de trabajo, experimento en mi propio taller y busco crecer constantemente."
+        ];
+
+        const typingElement = document.getElementById('typing');
+        const speed = 50;
+        const lineDelay = 500;
+        let line = 0;
+        let char = 0;
+
+        function type() {
+            if (line < lines.length) {
+                if (char < lines[line].length) {
+                    typingElement.innerHTML += lines[line].charAt(char);
+                    char++;
+                    setTimeout(type, speed);
+                } else {
+                    typingElement.innerHTML += '<br>';
+                    char = 0;
+                    line++;
+                    setTimeout(type, lineDelay);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
 </body>
 </html>
