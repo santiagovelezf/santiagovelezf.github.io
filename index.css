@@ -73,6 +73,10 @@ main {
     margin-left: -207px; /* Ajusta este valor para mover el texto más a la derecha */
 }
 
+#typing {
+    white-space: pre-wrap;
+}
+
 .main-bottom {
     text-align: center;
     margin-top: 10px;
