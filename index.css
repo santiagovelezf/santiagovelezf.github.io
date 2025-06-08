@@ -109,6 +109,31 @@ ul li a img {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Animación de flotación para los iconos de redes sociales */
+@keyframes flotando {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Aplicar la animación a los contenedores de cada icono */
+ul li:nth-child(1) {
+    animation: flotando 3s ease-in-out infinite;
+}
+
+ul li:nth-child(2) {
+    animation: flotando 3s ease-in-out infinite;
+    animation-delay: 0.5s; /* Desfase ligero para el segundo icono */
+}
+
+ul li:nth-child(3) {
+    animation: flotando 3s ease-in-out infinite;
+    animation-delay: 1s; /* Desfase para el tercer icono */
+}
+
 /* Efecto de resplandor al pasar el cursor sobre las imágenes de redes sociales */
 ul li a img:hover {
     transform: scale(1.5);
