@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Santiago Vélez Flórez — Desarrollador Maker Independiente. Experto en Python, IA, IoT, Diseño y Sistemas Embebidos.">
-    <meta name="author" content="Santiago Vélez Flórez">
+    <meta name="description" content="Código QR de Santiago VF Labs — Escanea para acceder a santiagovflabs.com">
+    <meta name="author" content="Santiago VF Labs">
+    <meta property="og:title" content="QR Code — Santiago VF Labs">
+    <meta property="og:description" content="Escanea este código QR para acceder a santiagovflabs.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="QR Code — Santiago VF Labs">
     <link rel="stylesheet" href="index.css">
-    <title>SVF — Santiago Vélez Flórez</title>
+    <title>QR Code — Santiago VF Labs</title>
     <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="theme-color" content="#050a0f">
 </head>
 <body>
     <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
@@ -15,86 +21,97 @@
     <div class="page">
         <header class="site-header">
             <div class="container header-content">
-                <div class="brand">
+                <a class="brand" href="https://santiagovflabs.com" target="_blank" rel="noopener" aria-label="Ir a Santiago VF Labs">
                     <span class="brand__badge" aria-hidden="true">SVF</span>
                     <span class="brand__name">Santiago VF Labs</span>
-                </div>
+                </a>
                 <img class="brand__logo" src="logo.gif" width="500" height="500" alt="Logo de Santiago VF Labs">
             </div>
         </header>
 
         <main class="container main">
-            <section class="content-section" aria-label="Contenido Principal">
-                <div class="content-background">
-                    <img class="featured-image" src="Robot6.gif" alt="Robot animado" id="robot">
+            <section class="qr-section" aria-label="Código QR">
+                <div class="qr-background">
+                    <img
+                        class="qr-image"
+                        src="qr-code.png"
+                        alt="Código QR que enlaza a santiagovflabs.com"
+                        width="720"
+                        height="720"
+                        loading="eager"
+                        id="qr-image-main"
+                    >
                 </div>
 
-                <div class="card content-card">
-                    <p class="content-description" id="typing"></p>
-                    <div class="content-actions">
-                        <ul class="social-links">
-                            <li>
-                                <a href="https://github.com/santiagovelezf" target="_blank" rel="noopener" aria-label="GitHub">
-                                    <img src="Github.png" alt="GitHub">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/santiago-vélez-flórez-869155258" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                    <img src="Linkedin.png" alt="LinkedIn">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://platzi.com/p/santiago.velezf/" target="_blank" rel="noopener" aria-label="Platzi">
-                                    <img src="Platzi.png" alt="Platzi">
-                                </a>
-                            </li>
-                        </ul>
+                <div class="card qr-card">
+                    <p class="qr-description">
+                        Escanea este código para acceder a
+                        <a class="qr-link" href="https://santiagovflabs.com" target="_blank" rel="noopener">santiagovflabs.com</a>
+                    </p>
+
+                    <div class="qr-actions">
+                        <button type="button" class="qr-button" id="fullscreen-btn" aria-label="Ver en pantalla completa">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                            </svg>
+                            Pantalla completa
+                        </button>
+                        <a class="qr-button" href="qr-code.png" download="santiagovflabs-qr.png" aria-label="Descargar código QR">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Descargar QR
+                        </a>
                     </div>
+
+                    <p class="social-label">Puedes encontrarme en:</p>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://github.com/santiagovelezf" target="_blank" rel="noopener" aria-label="GitHub">
+                                <img src="Github.png" alt="GitHub">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/santiago-vélez-flórez-869155258" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <img src="Linkedin.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://platzi.com/p/santiago.velezf/" target="_blank" rel="noopener" aria-label="Platzi">
+                                <img src="Platzi.png" alt="Platzi">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
             <div class="container footer-content">
-                <small>&copy; <span id="year"></span> Santiago Vélez Flórez</small>
+                <small>&copy; <span id="year"></span> Santiago VF Labs</small>
             </div>
         </footer>
     </div>
+
+    <!-- Fullscreen Overlay -->
+    <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Código QR en pantalla completa">
+        <button type="button" class="fullscreen-close" id="fullscreen-close" aria-label="Cerrar pantalla completa">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <img class="qr-image" src="qr-code.png" alt="Código QR que enlaza a santiagovflabs.com">
+        <span class="fullscreen-hint">Toca en cualquier lugar para cerrar</span>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Set year
             const yearEl = document.getElementById('year');
             if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-            // Typing effect
-            const lines = [
-                "¡Hola! Soy Santiago Vélez Flórez",
-                "Desarrollador Maker Independiente apasionado por la tecnología",
-                "Experto en Python, IA, IoT, Diseño y Sistemas Embebidos",
-                "Early adopter de IA • Innovador • Experimentador"
-            ];
-
-            const typingElement = document.getElementById('typing');
-            const speed = 40;
-            const lineDelay = 600;
-            let line = 0;
-            let char = 0;
-
-            function type() {
-                if (line < lines.length) {
-                    if (char < lines[line].length) {
-                        typingElement.innerHTML += lines[line].charAt(char);
-                        char++;
-                        setTimeout(type, speed);
-                    } else {
-                        typingElement.innerHTML += '<br>';
-                        char = 0;
-                        line++;
-                        setTimeout(type, lineDelay);
-                    }
-                }
-            }
-
-            type();
 
             // Matrix Canvas Effect
             const canvas = document.getElementById('matrix-canvas');
@@ -129,6 +146,49 @@
                 window.addEventListener('resize', () => {
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
+                });
+            }
+
+            // Fullscreen Mode
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+            const fullscreenClose = document.getElementById('fullscreen-close');
+            const qrImageMain = document.getElementById('qr-image-main');
+            const matrixCanvas = document.getElementById('matrix-canvas');
+
+            function openFullscreen() {
+                fullscreenOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                if (matrixCanvas) matrixCanvas.style.display = 'none';
+            }
+
+            function closeFullscreen() {
+                fullscreenOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+                if (matrixCanvas) matrixCanvas.style.display = '';
+            }
+
+            if (fullscreenBtn && fullscreenOverlay) {
+                fullscreenBtn.addEventListener('click', openFullscreen);
+                if (qrImageMain) qrImageMain.addEventListener('click', openFullscreen);
+
+                fullscreenOverlay.addEventListener('click', (e) => {
+                    if (e.target === fullscreenOverlay || e.target.classList.contains('qr-image')) {
+                        closeFullscreen();
+                    }
+                });
+
+                if (fullscreenClose) {
+                    fullscreenClose.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        closeFullscreen();
+                    });
+                }
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && fullscreenOverlay.classList.contains('active')) {
+                        closeFullscreen();
+                    }
                 });
             }
         });
