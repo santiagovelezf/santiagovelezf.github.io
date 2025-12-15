@@ -3,106 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Santiago Vélez Flórez — Desarrollador Maker Independiente. Experto en Python, IA, IoT, Diseño y Sistemas Embebidos.">
+    <meta name="author" content="Santiago Vélez Flórez">
     <link rel="stylesheet" href="index.css">
-    <title>SVF</title>
+    <title>SVF — Santiago Vélez Flórez</title>
     <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="SantiagoVF.png" alt="Santiago Vélez Flórez" class="header-img">
-            <h1>Santiago Vélez Flórez</h1>
-            <img src="logo.gif" alt="logo" class="header-img">
-        </div>
-    </header>
+    <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
 
-    <main>
-        <div id="matrix-overlay"></div>
-        <div class="main-top">
-            <div class="robot">
-                <img src="Robot6.gif" alt="Robot" id="robot">
+    <div class="page">
+        <header class="site-header">
+            <div class="container header-content">
+                <div class="brand">
+                    <span class="brand__badge" aria-hidden="true">SVF</span>
+                    <span class="brand__name">Santiago VF Labs</span>
+                </div>
+                <img class="brand__logo" src="logo.gif" width="500" height="500" alt="Logo de Santiago VF Labs">
             </div>
-            <div class="text-content">
-                <p id="typing" class="typing"></p>
-            </div>
-        </div>
-        <div class="main-bottom">
-            <p><strong>Puedes encontrarme en:</strong></p>
-            <ul>
-                <li>
-                    <a href="https://github.com/santiagovelezf" target="_blank">
-                        <img src="Github.png" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/santiago-vélez-flórez-869155258" target="_blank">
-                        <img src="Linkedin.png" alt="LinkedIn">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://platzi.com/p/santiago.velezf/" target="_blank">
-                        <img src="Platzi.png" alt="Platzi">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </main>
+        </header>
 
-    <footer>
-        <p>&copy; 2025 Santiago Vélez Flórez</p>
-        <p>Contacto: sanluiscompany.py@gmail.com </p>
-        <p>ai.innovator2023@gmail.com</p>
-    </footer>
+        <main class="container main">
+            <section class="content-section" aria-label="Contenido Principal">
+                <div class="content-background">
+                    <img class="featured-image" src="Robot6.gif" alt="Robot animado" id="robot">
+                </div>
+
+                <div class="card content-card">
+                    <p class="content-description" id="typing"></p>
+                    <div class="content-actions">
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://github.com/santiagovelezf" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <img src="Github.png" alt="GitHub">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/santiago-vélez-flórez-869155258" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                    <img src="Linkedin.png" alt="LinkedIn">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://platzi.com/p/santiago.velezf/" target="_blank" rel="noopener" aria-label="Platzi">
+                                    <img src="Platzi.png" alt="Platzi">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <small>&copy; <span id="year"></span> Santiago Vélez Flórez</small>
+            </div>
+        </footer>
+    </div>
     <script>
-        const lines = [
-            "¡Hola!",
-            "Soy un Desarrollador Maker Independiente, apasionado por la tecnología y la programación.",
-            "Domino Python y tengo experiencia en Diseño, Control, Sistemas Embebidos, IoT, IA y Ciencia de Datos.",
-            "Como early adopter, incorporo IA en mis flujos de trabajo, experimento en mi propio taller y busco crecer constantemente."
-        ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-        const typingElement = document.getElementById('typing');
-        const speed = 50;
-        const lineDelay = 500;
-        let line = 0;
-        let char = 0;
+            // Typing effect
+            const lines = [
+                "¡Hola! Soy Santiago Vélez Flórez",
+                "Desarrollador Maker Independiente apasionado por la tecnología",
+                "Experto en Python, IA, IoT, Diseño y Sistemas Embebidos",
+                "Early adopter de IA • Innovador • Experimentador"
+            ];
 
-        function type() {
-            if (line < lines.length) {
-                if (char < lines[line].length) {
-                    typingElement.innerHTML += lines[line].charAt(char);
-                    char++;
-                    setTimeout(type, speed);
-                } else {
-                    typingElement.innerHTML += '<br>';
-                    char = 0;
-                    line++;
-                    setTimeout(type, lineDelay);
+            const typingElement = document.getElementById('typing');
+            const speed = 40;
+            const lineDelay = 600;
+            let line = 0;
+            let char = 0;
+
+            function type() {
+                if (line < lines.length) {
+                    if (char < lines[line].length) {
+                        typingElement.innerHTML += lines[line].charAt(char);
+                        char++;
+                        setTimeout(type, speed);
+                    } else {
+                        typingElement.innerHTML += '<br>';
+                        char = 0;
+                        line++;
+                        setTimeout(type, lineDelay);
+                    }
                 }
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', type);
-    </script>
-    <script>
-        const matrixContainer = document.getElementById('matrix-overlay');
+            type();
 
-        function createColumn() {
-            const column = document.createElement('div');
-            column.classList.add('matrix-column');
-            const length = Math.floor(Math.random() * 10) + 5;
-            for (let i = 0; i < length; i++) {
-                column.innerHTML += Math.round(Math.random()) + '<br>';
+            // Matrix Canvas Effect
+            const canvas = document.getElementById('matrix-canvas');
+            if (canvas && canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+                const columns = Math.floor(canvas.width / 20);
+                const drops = Array(columns).fill(0);
+
+                function drawMatrix() {
+                    ctx.fillStyle = 'rgba(5, 10, 15, 0.05)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = '#00ff9c';
+                    ctx.font = '16px monospace';
+
+                    for (let i = 0; i < drops.length; i++) {
+                        const text = chars[Math.floor(Math.random() * chars.length)];
+                        ctx.fillText(text, i * 20, drops[i] * 20);
+
+                        if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                            drops[i] = 0;
+                        }
+                        drops[i]++;
+                    }
+                }
+
+                setInterval(drawMatrix, 50);
+
+                window.addEventListener('resize', () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                });
             }
-            column.style.left = Math.random() * 100 + '%';
-            column.style.fontSize = Math.random() * 20 + 10 + 'px';
-            column.style.opacity = 0.2 + Math.random() * 0.3;
-            column.style.animationDuration = Math.random() * 4 + 4 + 's';
-            matrixContainer.appendChild(column);
-            column.addEventListener('animationend', () => column.remove());
-        }
-
-        setInterval(createColumn, 400);
+        });
     </script>
 </body>
 </html>
