@@ -105,10 +105,9 @@ body {
 }
 
 .brand__logo {
-    width: 60px;
+    width: 100px;
     height: auto;
     filter: drop-shadow(0 0 15px rgba(0, 255, 156, 0.3));
-    animation: subtle-float 3s ease-in-out infinite;
 }
 
 /* ═══════════════════════════════════════════════════════════════
